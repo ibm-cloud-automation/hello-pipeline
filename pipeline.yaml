@@ -108,7 +108,6 @@ spec:
         value: $(params.GIT_USER_EMAIL)
       - name: GIT_SCRIPT
         value: |
-          cp /root/.ssh/ssh-privatekey /root/.ssh/id_rsa
           ssh-keyscan -t rsa github.com > /root/.ssh/known_hosts
           cd /workspace/source
           git checkout main
