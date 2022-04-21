@@ -93,6 +93,7 @@ spec:
     - name: commit-push
       taskRef:
         name: git-cli
+        kind: ClusterTask
       runAfter:
         - update-manifests
       workspaces:
