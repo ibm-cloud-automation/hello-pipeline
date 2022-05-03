@@ -86,7 +86,7 @@ spec:
           echo 'Patching kustomization.yaml'
           oc patch --type merge --local -o yaml -f /workspace/manifest-dir/base/kustomization.yaml \
             -p "images:
-                  - name: hello-image
+                  - name: image-name-placeholder
                     newName: $(params.IMAGE_NAME):$(tasks.fetch-code-repository.results.commit)" \
             > kustomization.yaml
             mv kustomization.yaml /workspace/manifest-dir/base/kustomization.yaml
