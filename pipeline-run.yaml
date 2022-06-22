@@ -15,7 +15,7 @@ spec:
   - name: GIT_CONFIG_REPO
     value: git@github.com:ibm-cloud-automation/hello-config
   - name: IMAGE_NAME
-    value: image-registry.openshift-image-registry.svc:5000/raimond-van-stijn-demo/hello
+    value: image-registry.openshift-image-registry.svc:5000/demo/hello
   pipelineRef:
     name: hello
   workspaces:
