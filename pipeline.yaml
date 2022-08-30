@@ -47,6 +47,8 @@ spec:
         - name: source
           workspace: source
       params:
+        - name: DOCKERFILE
+          value: ./Containerfile
         - name: IMAGE
           value: $(params.IMAGE_NAME):$(tasks.fetch-code-repository.results.commit)
         - name: TLSVERIFY
