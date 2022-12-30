@@ -63,8 +63,6 @@ spec:
       workspaces:
         - name: output
           workspace: source
-        - name: ssh-directory
-          workspace: github-credentials
       params:
         - name: url
           value: $(params.GIT_CONFIG_REPO)
