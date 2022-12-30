@@ -3,9 +3,6 @@ kind: Pipeline
 metadata:
   name: hello
 spec:
-  env:
-    - name: "HOME"
-      value: "/tekton/home"
   params:
     - name: IMAGE_NAME
       type: string
@@ -58,6 +55,9 @@ spec:
           value: "false"
 
     - name: fetch-config-repository
+      env:
+        - name: "HOME"
+          value: "/tekton/home"
       taskRef:
         name: git-clone
         kind: ClusterTask
