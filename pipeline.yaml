@@ -3,6 +3,9 @@ kind: Pipeline
 metadata:
   name: hello
 spec:
+  env:
+    - name: "HOME"
+      value: "/tekton/home"
   params:
     - name: IMAGE_NAME
       type: string
