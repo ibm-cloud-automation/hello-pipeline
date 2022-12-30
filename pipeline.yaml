@@ -55,9 +55,6 @@ spec:
           value: "false"
 
     - name: fetch-config-repository
-      env:
-        - name: "HOME"
-          value: "/tekton/home"
       taskRef:
         name: git-clone
         kind: ClusterTask
