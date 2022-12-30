@@ -18,9 +18,6 @@ spec:
     value: image-registry.openshift-image-registry.svc:5000/demo/hello
   pipelineRef:
     name: hello
-  podTemplate:
-    securityContext:
-      fsGroup: 65532
   workspaces:
   - name: source
     persistentVolumeClaim:
