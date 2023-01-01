@@ -69,6 +69,3 @@ spec:
       - name: source
         persistentVolumeClaim:
           claimName: pipeline-source-pvc
-      - name: github-credentials
-        secret:
-          secretName: github
