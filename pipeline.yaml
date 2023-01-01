@@ -18,7 +18,6 @@ spec:
       type: string
   workspaces:
     - name: source
-    - name: github-credentials
   tasks:
     - name: fetch-code-repository
       taskRef:
@@ -100,8 +99,6 @@ spec:
       workspaces:
         - name: source
           workspace: source
-        - name: ssh-directory
-          workspace: github-credentials
       params:
       - name: GIT_USER_NAME
         value: $(params.GIT_USER_NAME)
