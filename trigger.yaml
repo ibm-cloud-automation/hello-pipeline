@@ -1,5 +1,5 @@
 ---
-apiVersion: triggers.tekton.dev/v1alpha1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: EventListener
 metadata:
   name: hello-app
@@ -8,7 +8,7 @@ spec:
   triggers:
     - triggerRef: hello-trigger
 ---
-apiVersion: triggers.tekton.dev/v1alpha1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: Trigger
 metadata:
   name: hello-trigger
@@ -19,7 +19,7 @@ spec:
   template:
     ref: hello-app
 ---
-apiVersion: triggers.tekton.dev/v1alpha1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerBinding
 metadata:
   name: hello-app
@@ -32,7 +32,7 @@ spec:
   - name: git-revision
     value: $(body.head_commit.id)
 ---
-apiVersion: triggers.tekton.dev/v1alpha1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerTemplate
 metadata:
   name: hello-app
